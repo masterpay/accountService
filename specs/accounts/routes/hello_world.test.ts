@@ -15,7 +15,7 @@ describe('accounts routes', () => {
     it('Should return hello', async () => {
       const { body } = await supertest(app.server)
         .get('/accounts')
-        .expect(httpStatus.OK, "hello");
+        .expect(httpStatus.OK, 'hello');
     });
   });
 });
