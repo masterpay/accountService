@@ -12,6 +12,7 @@ script:
 
 after_script:
   - docker run --rm "$IMAGE_NAME" npm run test || travis_terminate 1
+  - docker run --rm "$IMAGE_NAME" npm run lint || travis_terminate 1
   - docker images
 
 deploy:
