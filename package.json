@@ -5,7 +5,9 @@
   "main": "src/main/index.js",
   "scripts": {
     "test": "jest",
-    "serve": "ts-node src/index.ts"
+    "serve": "ts-node src/index.ts",
+    "lint": "prettier --check **/*.{ts,js,html,css,md,json}",
+    "lint-fix": "prettier --write **/*.{ts,js,html,css,md,json}"
   },
   "repository": {
     "type": "git",
@@ -30,9 +32,12 @@
     "@types/node": "^12.7.1",
     "@types/supertest": "^2.0.8",
     "jest": "^24.8.0",
+    "prettier": "^1.18.2",
     "supertest": "^4.0.2",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3"
   }
 }
